@@ -1,0 +1,131 @@
+@media only screen and (max-width:750px) {
+    .top {
+        flex-direction: column;
+    }
+
+    .right ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-image:url('../img/header-bg.jpg');
+        transform: translate(-443px 0px);
+
+    }
+
+    .right ul.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .container {
+        margin-top: -140px;
+    }
+
+    .banner {
+        background: url(../img/header-bg.jpg) center;
+    }
+
+    .coffee {
+        margin-left: 0;
+    }
+
+    .coffee h3 {
+        font-size: 2.5rem;
+    }
+
+    .first {
+        height: auto;
+    }
+
+    .main {
+        flex-wrap: wrap;
+    }
+
+    .main>div {
+        width: 100%;
+        height: auto;
+    }
+
+    .about_us>div {
+        width: 100%;
+    }
+
+    .about_us {
+        flex-wrap: wrap;
+        margin-top: -115px;
+    }
+
+    .read_more {
+        margin-bottom: 12px;
+    }
+
+    .ar {
+        margin-top: 0;
+    }
+
+    .about {
+        height: auto;
+    }
+
+    .cards-item {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .blog {
+        height: auto;
+    }
+
+    .boxes {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+    }
+
+    .btn_blog {
+        margin-left: 133px;
+        margin-bottom: 12px;
+    }
+
+    .contactme input {
+        margin-left: 45px;
+    }
+
+    .contactme textarea {
+        margin-left: 45px;
+    }
+
+    .submit{
+        width: 46%;
+        margin-left: 50px;
+    }
+
+    .abt {
+        margin-left: 32px;
+        line-height: 2.2;
+        width: 50%;
+        padding-top: 75px;
+    }
+
+    .my {
+        display: block;
+        margin-bottom: 22px;
+        text-align: center;
+    }
+
+    .follows {
+        padding-top: 0px;
+        margin-top: 12px;
+        margin-left: 32px;
+    }
+
+}
