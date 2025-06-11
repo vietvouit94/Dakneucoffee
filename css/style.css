@@ -44,6 +44,19 @@ html {
     margin-left: 18px;
     cursor: pointer;
 }
+.buy-now-btn {
+    background: #92C83E;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.buy-now-btn:hover {
+    background: #7BA82C;
+}
 
 /* Main Header */
 .main-header {
