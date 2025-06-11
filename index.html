@@ -51,36 +51,67 @@
 </head>
 
 <body>
-    <header class="head" id="header">
-        <nav class="top" id="nave">
-            <div class="left">
-                <img src="img/logo.png" alt="">
-                <a href="index.html">
-                    <h1>Cafe</h1>
-                </a>
-            </div>
-            <div class="menu-icon" id="menu-icon">&#9776;</div>
-            <div class="right" >
-                <ul id="nav-links">
-                    <a href="index.html">
-                        <li>Home</li>
-                    </a>
-                    <a href="blog.html">
-                        <li>Blog</li>
-                    </a>
-                    <a href="about.html">
-                        <li>About</li>
-                    </a>
-                    <a href="contact.html">
-                        <li>Contact</li>
-                    </a>
-                    <a href="">
-                        <li>Reviews</li>
-                    </a>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <!-- Top Bar -->
+<div class="top-bar">
+    <div class="top-bar-left">
+        <!-- Nếu không cần logo Envato, có thể bỏ dòng này -->
+        <!-- <img src="img/envato-logo.png" alt="Envato Market" class="envato-logo"> -->
+        <a href="#" class="envato-logo">🌿DakNue Coffea</a>
+    </div>
+    <div class="top-bar-center">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="top-bar-right">
+        <span>My Account</span>
+        <span>Currency (VND)</span>
+    </div>
+</div>
+
+<!-- Main Header -->
+<header class="main-header">
+    <div class="header-left">
+        <img src="img/logo.png" alt="Logo" class="main-logo">
+        <span class="brand-name">DakNue Coffea</span>
+    </div>
+    <div class="header-center">
+        <div class="search-bar">
+            <select>
+                <option>All Categories</option>
+                <!-- Thêm các danh mục khác nếu cần -->
+            </select>
+            <input type="text" placeholder="Look for Mocha, Robusta Roasted">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <div class="header-right">
+        <button class="icon-btn"><i class="far fa-heart"></i></button>
+        <div class="cart-info">
+            <i class="fas fa-shopping-basket"></i>
+            <span>9 Packet</span>
+            <span>249.99$</span>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation Bar -->
+<nav class="nav-bar">
+    <ul>
+        <li class="dropdown">
+            <a href="#">Categories <i class="fas fa-chevron-down"></i></a>
+            <!-- Dropdown menu nếu cần -->
+        </li>
+        <li><a href="#">Home Pages</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li class="menu-toggle"><i class="fas fa-bars"></i></li>
+    </ul>
+</nav>
+ 
     <section class="banner">
         <div class="container">
             <div class="coffee">
