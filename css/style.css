@@ -137,6 +137,9 @@ html {
         }
         
         .categories-dropdown .dropdown-menu {
+            list-style: none !important;
+            padding-left: 0 !important;
+            margin: 0 !important;
             display: none;
             position: absolute;
             top: 100%;
@@ -149,7 +152,6 @@ html {
             margin-top: 2px;
             border-radius: 0 0 6px 6px;
             padding: 0;
-            list-style: none;
         }
         
         .categories-dropdown:hover .dropdown-menu,
