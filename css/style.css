@@ -107,7 +107,12 @@ html {
             text-decoration: none;
             margin-right: 32px;
         }
-        
+        .logo-img {
+            width: 48px;
+            height: 48px;
+            margin-right: 12px;
+            vertical-align: middle; /* Giúp căn giữa với chữ */
+        }
         .search-section {
             flex: 1 1 0;
             display: flex;
