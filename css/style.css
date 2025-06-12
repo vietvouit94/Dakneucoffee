@@ -173,7 +173,8 @@ html {
         /* Navigation */
         .navigation {
             background-color: #8B4513;
-            padding: 0;
+            padding: 8px 0;
+            margin-bottom: 10px;
         }
 
         .nav-content {
