@@ -145,7 +145,8 @@ html {
         .search-bar input {
             flex: 1;
             padding: 10px 15px;
-            border: none;
+            border: 1.5px;
+            border-radius: 4px;
             outline: none;
             font-size: 14px;
         }
