@@ -138,6 +138,9 @@ html {
         .search-bar {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
+            display: flex;
+            align-items: center;
+            flex: 1;
             /* Không cần margin-left */
         }
 
