@@ -91,48 +91,47 @@ html {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
             padding: 0 20px;
+            height: 80px; /* hoặc chiều cao bạn muốn */
         }
-
+        
         .logo {
+            flex: 0 0 auto;
             display: flex;
             align-items: center;
-            font-size: 28px;
+            font-size: 36px;
             font-weight: bold;
-            color: #8B4513;
+            color: #4b2e19;
             text-decoration: none;
+            margin-right: 32px;
         }
-
-        .logo i {
-            margin-right: 8px;
-            color: #8B4513;
-        }
-
+        
         .search-section {
+            flex: 1 1 0;
             display: flex;
-            align-items: center;
-            gap: 8px;
-            flex: 1;
             justify-content: center;
+            align-items: center;
         }
+        
         .search-group {
             display: flex;
             align-items: stretch;
             width: 100%;
+            max-width: 600px;
         }
+        
         .categories-dropdown {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
             border-right: none;
-            /* Đảm bảo chiều cao bằng search-bar */
             display: flex;
             align-items: center;
             font-weight: bold;
             background: #f8f8f8;
             padding: 0 18px;
-            height: 40px; /* hoặc cùng height với .search-bar input */
+            height: 40px;
         }
         
         .search-bar {
@@ -141,9 +140,8 @@ html {
             display: flex;
             align-items: center;
             flex: 1;
-            /* Không cần margin-left */
         }
-
+        
         .search-bar input {
             flex: 1;
             padding: 10px 15px;
@@ -151,46 +149,62 @@ html {
             outline: none;
             font-size: 14px;
         }
-
+        
         .search-btn {
             background-color: #8B4513;
             color: white;
-            padding: 10px 15px;
+            padding: 0 18px;
             border: none;
             cursor: pointer;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
+        
         .header-actions {
+            flex: 0 0 auto;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 12px;
+            margin-left: 32px;
         }
-
-        .wishlist {
-            color: #666;
+        
+        .wishlist, .cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            width: 48px;
+            height: 48px;
+            background: #fff;
+            color: #8B4513;
+            font-size: 22px;
             text-decoration: none;
-            font-size: 20px;
+            transition: box-shadow 0.2s;
         }
-
+        
         .cart {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #666;
-            text-decoration: none;
+            width: auto;
+            padding: 0 12px;
+            gap: 8px;
         }
-
+        
         .cart-info {
-            text-align: right;
-            font-size: 12px;
+            text-align: left;
+            margin-left: 6px;
         }
-
+        
         .cart-count {
             font-weight: bold;
+            color: #222;
+            font-size: 15px;
         }
-
+        
         .cart-total {
-            color: #888;
+            color: #8B4513;
+            font-size: 13px;
         }
 
         /* Navigation */
