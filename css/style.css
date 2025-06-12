@@ -113,7 +113,7 @@ html {
         .search-section {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 8px;
             flex: 1;
             justify-content: center;
         }
