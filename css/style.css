@@ -120,6 +120,7 @@ html {
         .search-group {
             display: flex;
             align-items: stretch;
+            width: 100%;
         }
         .categories-dropdown {
             border-top-right-radius: 0;
