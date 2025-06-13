@@ -7,6 +7,7 @@ html {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -435,7 +436,10 @@ html {
                 align-items: center;
                 justify-content: space-between;
                 flex-direction: row;
-                width: 100%;
+                width: 100vw;
+                max-width: 100vw;
+                overflow-x: hidden;
+                padding: 0 2px;
             }
             
             .main-nav {
@@ -445,28 +449,28 @@ html {
                 display: none !important;
             }
             .header-actions {
+                margin-left: 0;
                 margin-right: 0;
+                padding-right: 0;
+                gap: 4px;
             }
             .header-actions .cart {
                 display: flex !important;
                 align-items: center;
                 justify-content: flex-end;
                 font-size: 22px;
-                padding: 0 2px;
-                margin-left: auto;
-                background: #fff;
-                border-radius: 8px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+                padding: 0 1px;
+                min-width: 40px;
+                max-width: 48px;
+                box-sizing: border-box;
                 color: #8B4513;
             }
             .navigation .cart {
                 display: none !important;
             }
             .logo {
-                font-size: 28px;
-                margin: 0 16px 0 0;
-                display: flex;
-                align-items: center;
+                font-size: 26px;
+                margin: 0 8px 0 0;
             }
         }
         @media (min-width: 769px) {
