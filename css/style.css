@@ -1001,62 +1001,24 @@ html {
 }
 
 @media (max-width: 768px) {
-  .nav-content {
+  .top-bar {
     flex-direction: column;
     align-items: stretch;
-    min-height: unset;
-    padding: 0 8px;
-    position: relative;
+    padding: 6px 8px;
+    font-size: 13px;
+    gap: 4px;
   }
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    background: #8B4513;
+  .top-bar-left, .top-bar-right {
+    justify-content: center;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    text-align: center;
   }
-  .main-nav.show {
-    display: flex;
+  .top-bar .social-icons {
+    justify-content: center;
+    gap: 8px;
   }
-  .main-nav a {
-    padding: 16px 12px;
-    border-bottom: 1px solid #a86b3c;
-    font-size: 1.1rem;
-  }
-  .nav-categories-menu {
-    width: 100%;
-    justify-content: flex-start;
-    font-size: 1.1rem;
-    padding: 12px 10px;
-  }
-  .nav-toggle {
-    display: block;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 100;
-  }
-  .nav-categories-dropdown-menu {
-    left: 0;
-    min-width: 100vw;
-    position: static;
-    border-radius: 0 0 10px 10px;
-  }
-}
-
-.nav-toggle {
-  display: none;
-}
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-}
-
-@media (max-width: 768px) {
   .main-header {
-    padding: 6px 0;
+    padding: 8px 0;
     height: auto;
   }
   .header-content {
@@ -1129,6 +1091,48 @@ html {
     min-height: 48px;
   }
   .nav-content {
+    flex-direction: column;
+    align-items: stretch;
     padding: 0 4px;
+    position: relative;
   }
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background: #8B4513;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .main-nav.show {
+    display: flex;
+  }
+  .main-nav a {
+    padding: 16px 12px;
+    border-bottom: 1px solid #a86b3c;
+    font-size: 1.1rem;
+  }
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+  }
+  .nav-categories-menu {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 1.1rem;
+    padding: 12px 10px;
+  }
+  .nav-categories-dropdown-menu {
+    left: 0;
+    min-width: 100vw;
+    position: static;
+    border-radius: 0 0 10px 10px;
+  }
+}
+.nav-toggle { display: none; }
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
 }
