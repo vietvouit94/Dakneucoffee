@@ -161,7 +161,7 @@ html {
         
         .categories-dropdown .dropdown-menu li {
             padding: 14px 20px;
-            color: #333;
+            color: #888;
             cursor: pointer;
             transition: background 0.2s;
             border-bottom: 1px solid #f2f2f2;
