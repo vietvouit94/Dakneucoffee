@@ -438,6 +438,36 @@ html {
             .main-nav {
                 display: none;
             }
+            .wishlist, .cart-info {
+                display: none !important;
+            }
+            .header-actions .cart {
+                display: none !important;
+            }
+            .navigation .cart {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 20px;
+                padding: 0 12px;
+                height: 100%;
+                background: none;
+                border: none;
+                box-shadow: none;
+            }
+        }
+        @media (min-width: 769px) {
+            .header-content .main-nav,
+            .header-content .nav-toggle {
+                display: none !important;
+            }
+            .navigation .cart {
+                display: none !important;
+            }
+            .header-actions .cart {
+                display: flex !important;
+            }
         }
 /* Header Section */
 
