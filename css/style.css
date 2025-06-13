@@ -456,6 +456,12 @@ html {
             .navigation .cart {
                 display: none !important;
             }
+            .logo {
+                font-size: 28px;
+                margin: 0 16px 0 0;
+                display: flex;
+                align-items: center;
+            }
         }
         @media (min-width: 769px) {
             .header-content .main-nav,
@@ -1032,8 +1038,8 @@ html {
 
 @media (max-width: 768px) {
   .logo {
-    font-size: 36px;
-    margin: 0 32px 0 0;
+    font-size: 28px;
+    margin: 0 16px 0 0;
     display: flex;
     align-items: center;
   }
