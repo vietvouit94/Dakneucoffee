@@ -442,19 +442,19 @@ html {
                 display: none !important;
             }
             .header-actions .cart {
-                display: none !important;
-            }
-            .navigation .cart {
                 display: flex !important;
                 align-items: center;
-                justify-content: center;
-                color: #fff;
-                font-size: 20px;
+                justify-content: flex-end;
+                font-size: 22px;
                 padding: 0 12px;
-                height: 100%;
-                background: none;
-                border: none;
-                box-shadow: none;
+                margin-left: auto;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+                color: #8B4513;
+            }
+            .navigation .cart {
+                display: none !important;
             }
         }
         @media (min-width: 769px) {
