@@ -465,6 +465,7 @@ html {
                 max-width: 48px;
                 box-sizing: border-box;
                 color: #8B4513;
+                margin-left: 15px;
             }
             .navigation .cart {
                 display: none !important;
