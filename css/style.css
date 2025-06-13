@@ -431,8 +431,11 @@ html {
             }
             
             .header-content {
-                flex-direction: column;
-                gap: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                width: 100%;
             }
             
             .main-nav {
