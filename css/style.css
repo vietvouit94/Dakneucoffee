@@ -1002,19 +1002,15 @@ html {
 
 @media (max-width: 768px) {
   .logo {
-    font-size: 20px;
-    margin: 0;
-    flex: 0 0 auto;
+    font-size: 36px;
+    margin: 0 32px 0 0;
     display: flex;
     align-items: center;
   }
   .logo img {
-    width: 32px !important;
-    height: 32px !important;
-    margin-right: 6px;
-  }
-  .wishlist, .cart-info {
-    display: none !important;
+    width: 68px !important;
+    height: 68px !important;
+    margin-right: 12px;
   }
   .header-actions {
     display: flex;
@@ -1027,34 +1023,8 @@ html {
     margin: 0;
     padding: 0 4px;
   }
-  .main-nav {
-    display: flex !important;
-    flex-direction: column;
-    background: #8B4513;
-    border-radius: 8px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-    margin-left: 8px;
-    z-index: 100;
-  }
-  .main-nav a {
-    color: #fff;
-    padding: 10px 16px;
-    font-size: 1.05rem;
-    border-bottom: 1px solid #a86b3c;
-    text-align: left;
-    width: 100%;
-  }
-  .main-nav a:last-child {
-    border-bottom: none;
-  }
-  .nav-toggle {
-    display: flex !important;
-    align-items: center;
-    cursor: pointer;
-    font-size: 24px;
-    margin-left: 8px;
-  }
-  .navigation .main-nav {
+  /* Ẩn main-nav trong header-content trên mobile */
+  .header-content .main-nav {
     display: none !important;
   }
 }
