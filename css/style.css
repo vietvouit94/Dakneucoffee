@@ -1001,69 +1001,36 @@ html {
 }
 
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 8px;
-    padding: 0 8px;
-    position: relative;
-  }
-  .logo {
-    order: 1;
-    margin: 0 10px 0 0;
-    justify-content: flex-start;
-    font-size: 22px;
-    flex: 0 0 auto;
-  }
-  .search-section {
-    order: 2;
-    flex: 1 1 0;
-    margin: 0 8px;
-  }
-  .header-actions {
-    order: 3;
-    margin-left: 0;
-  }
-  .nav-toggle {
-    order: 4;
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 101;
-  }
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    background: #8B4513;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 100%;
+  .navigation {
+    width: 100vw !important;
+    min-width: 100vw !important;
     left: 0;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-    border-radius: 0 0 10px 10px;
-    z-index: 100;
+    right: 0;
+    position: relative;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow-x: hidden;
   }
-  .main-nav.show {
-    display: flex;
+  .nav-content {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    justify-content: flex-start;
   }
-  .main-nav a {
-    padding: 16px 12px;
-    border-bottom: 1px solid #a86b3c;
-    font-size: 1.1rem;
-    color: #fff;
-    text-align: left;
-    background: none;
-    width: 100%;
+  .categories-menu, .nav-categories-menu {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
-  .main-nav a:last-child {
-    border-bottom: none;
-  }
-  .navigation .main-nav {
+  .nav-toggle, .main-nav {
     display: none !important;
   }
 }
