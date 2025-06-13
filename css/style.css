@@ -444,6 +444,9 @@ html {
             .wishlist, .cart-info {
                 display: none !important;
             }
+            .header-actions {
+                margin-right: 8px;
+            }
             .header-actions .cart {
                 display: flex !important;
                 align-items: center;
