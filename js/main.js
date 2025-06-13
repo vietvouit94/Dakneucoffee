@@ -19,7 +19,7 @@ document.getElementById('coffee_order').addEventListener('submit', function (eve
 
 });
 
-// Responsive nav toggle for mobile
+// Responsive nav toggle for mobile (header-content)
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
 if (navToggle && mainNav) {

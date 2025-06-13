@@ -1001,19 +1001,6 @@ html {
 }
 
 @media (max-width: 768px) {
-  .top-bar {
-    position: relative;
-  }
-  .buy-now-btn {
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    margin: 0;
-    z-index: 10;
-  }
-  .navigation {
-    display: none !important;
-  }
   .header-content {
     flex-direction: row;
     align-items: center;
@@ -1034,46 +1021,37 @@ html {
     flex: 1 1 0;
     margin: 0 8px;
   }
-  .cart {
+  .header-actions {
     order: 3;
+    margin-left: 0;
+  }
+  .nav-toggle {
+    order: 4;
     margin-left: auto;
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 101;
   }
-  .wishlist {
-    display: none !important;
-  }
-  /* Hiển thị nav-categories-dropdown-menu như dropdown trong header-content */
-  .nav-categories-dropdown-menu {
-    display: block !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 220px;
-    background: #fff;
-    color: #222;
-    border: 1px solid #eee;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-    z-index: 100;
-    border-radius: 0 0 10px 10px;
-    padding: 10px 0;
-    font-size: 18px;
-    font-family: 'Poppins', Arial, sans-serif;
-    list-style: none;
-  }
-  /* Main-nav trong header-content hiển thị dọc */
-  .header-content .main-nav {
-    display: flex;
+  .main-nav {
+    display: none;
     flex-direction: column;
     background: #8B4513;
     width: 100%;
     margin: 0;
     padding: 0;
-    position: static;
+    position: absolute;
+    top: 100%;
+    left: 0;
     box-shadow: 0 8px 32px rgba(0,0,0,0.10);
     border-radius: 0 0 10px 10px;
     z-index: 100;
   }
-  .header-content .main-nav a {
+  .main-nav.show {
+    display: flex;
+  }
+  .main-nav a {
     padding: 16px 12px;
     border-bottom: 1px solid #a86b3c;
     font-size: 1.1rem;
@@ -1082,10 +1060,9 @@ html {
     background: none;
     width: 100%;
   }
-  .header-content .main-nav a:last-child {
+  .main-nav a:last-child {
     border-bottom: none;
   }
-  /* Ẩn main-nav trong navigation khi mobile */
   .navigation .main-nav {
     display: none !important;
   }
