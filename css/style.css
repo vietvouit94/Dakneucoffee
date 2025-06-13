@@ -999,3 +999,57 @@ html {
 .nav-categories-menu:focus-within > .nav-categories-dropdown-menu {
     display: block !important;
 }
+
+@media (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: unset;
+    padding: 0 8px;
+    position: relative;
+  }
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background: #8B4513;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .main-nav.show {
+    display: flex;
+  }
+  .main-nav a {
+    padding: 16px 12px;
+    border-bottom: 1px solid #a86b3c;
+    font-size: 1.1rem;
+  }
+  .nav-categories-menu {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 1.1rem;
+    padding: 12px 10px;
+  }
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+  }
+  .nav-categories-dropdown-menu {
+    left: 0;
+    min-width: 100vw;
+    position: static;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+}
