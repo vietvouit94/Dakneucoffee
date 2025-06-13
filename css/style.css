@@ -1060,6 +1060,35 @@ html {
     font-family: 'Poppins', Arial, sans-serif;
     list-style: none;
   }
+  /* Main-nav trong header-content hiển thị dọc */
+  .header-content .main-nav {
+    display: flex;
+    flex-direction: column;
+    background: #8B4513;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: static;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    border-radius: 0 0 10px 10px;
+    z-index: 100;
+  }
+  .header-content .main-nav a {
+    padding: 16px 12px;
+    border-bottom: 1px solid #a86b3c;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: left;
+    background: none;
+    width: 100%;
+  }
+  .header-content .main-nav a:last-child {
+    border-bottom: none;
+  }
+  /* Ẩn main-nav trong navigation khi mobile */
+  .navigation .main-nav {
+    display: none !important;
+  }
 }
 .nav-toggle { display: none; }
 @media (max-width: 768px) {
