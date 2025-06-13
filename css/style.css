@@ -1009,4 +1009,41 @@ html {
   .nav-categories-menu {
     display: none !important;
   }
+  .wishlist,
+  .cart-info {
+    display: none !important;
+  }
+  .header-content .main-nav {
+    display: flex !important;
+    flex-direction: column;
+    background: #8B4513;
+    width: auto;
+    margin-left: 8px;
+    padding: 0;
+    position: static;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    border-radius: 8px;
+    z-index: 100;
+  }
+  .header-content .main-nav a {
+    padding: 12px 16px;
+    border-bottom: 1px solid #a86b3c;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: left;
+    background: none;
+    width: 100%;
+  }
+  .header-content .main-nav a:last-child {
+    border-bottom: none;
+  }
+  /* Ẩn main-nav trong navigation khi mobile */
+  .navigation .main-nav {
+    display: none !important;
+  }
+}
+@media (min-width: 769px) {
+  .header-content .main-nav {
+    display: none !important;
+  }
 }
