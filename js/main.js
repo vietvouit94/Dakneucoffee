@@ -85,39 +85,25 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('❌ Dropdown menu not found');
         }
         
-        // Click to toggle dropdown
+        // Click to toggle dropdown (sửa lại logic)
         categoriesDropdown.addEventListener('click', function(e) {
             e.stopPropagation();
-            const isExpanded = dropdown.getAttribute("aria-expanded") === "true";
-            dropdown.setAttribute("aria-expanded", !isExpanded);
-            dropdownMenu.style.display = !isExpanded ? "block" : "none";
+            const isExpanded = this.getAttribute("aria-expanded") === "true";
+            this.setAttribute("aria-expanded", !isExpanded);
+            // Không cần set style cho .dropdown-menu nữa!
         });
-        
-        // Keyboard navigation
-        categoriesDropdown.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                console.log('⌨️ Keyboard navigation triggered');
-                this.click();
-            }
-        });
-        
-        // Close dropdown when clicking outside
+
+        // Đóng dropdown khi click ngoài
         document.addEventListener('click', function(event) {
             if (!categoriesDropdown.contains(event.target)) {
-                dropdown.setAttribute("aria-expanded", "false");
-                dropdownMenu.style.display = "none";
+                categoriesDropdown.setAttribute("aria-expanded", "false");
             }
         });
-        
-        // Close dropdown on escape key
+
+        // Đóng dropdown khi bấm Escape
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                if (dropdownMenu && dropdownMenu.classList.contains('show')) {
-                    dropdownMenu.classList.remove('show');
-                    categoriesDropdown.setAttribute('aria-expanded', 'false');
-                    console.log('📋 Dropdown closed (escape key)');
-                }
+                categoriesDropdown.setAttribute('aria-expanded', 'false');
             }
         });
     } else {
