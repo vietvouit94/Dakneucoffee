@@ -79,7 +79,7 @@
         min-width: 100%;
         left: 0;
         z-index: 1001;
-        display: none !important;
+        display: none;
     }
     
     .search-bar {
@@ -571,4 +571,9 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+.categories-dropdown:hover > .dropdown-menu, 
+.categories-dropdown:focus-within > .dropdown-menu {
+  display: block;
 }
