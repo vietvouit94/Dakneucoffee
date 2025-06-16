@@ -929,3 +929,45 @@ html {
         display: flex !important;
     }
 }
+
+/* Dropdown menu chuẩn cho mọi loại dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 8px 0;
+  margin-top: 4px;
+}
+
+[aria-expanded="true"] > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  color: #222;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu li:hover,
+.dropdown-menu li:focus {
+  background: #f8f8f8;
+  color: #8B4513;
+  outline: none;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
