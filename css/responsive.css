@@ -529,17 +529,6 @@
 
 /* Touch-friendly improvements for all devices */
 @media (hover: none) and (pointer: coarse) {
-    .categories-dropdown,
-    .nav-categories-menu,
-    .main-nav a,
-    .buy,
-    .read_more,
-    .btn_blog,
-    .submit {
-        min-height: 44px;
-        min-width: 44px;
-    }
-    
     .social-icons a,
     .wishlist,
     .cart {
