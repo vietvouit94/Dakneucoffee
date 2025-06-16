@@ -68,8 +68,17 @@
     .categories-dropdown {
         width: 100%;
         justify-content: center;
-        border-radius: 8px;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-color);
         height: 48px;
+        min-width: auto;
+    }
+    
+    .categories-dropdown .dropdown-menu {
+        width: 100%;
+        min-width: 100%;
+        left: 0;
+        z-index: 1001;
     }
     
     .search-bar {

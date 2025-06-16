@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const mainNav = document.querySelector('.main-nav');
-    const navCategoriesMenu = document.querySelector('.nav-categories-menu');
+    const categoriesDropdown = document.querySelector('.categories-dropdown');
     
     // Mobile menu toggle
     if (navToggle && mainNav) {
@@ -74,25 +74,62 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Categories dropdown for mobile
-    if (navCategoriesMenu) {
-        navCategoriesMenu.addEventListener('click', function(e) {
+    // Categories dropdown functionality
+    if (categoriesDropdown) {
+        console.log('✅ Categories dropdown found:', categoriesDropdown);
+        const dropdownMenu = categoriesDropdown.querySelector('.dropdown-menu');
+        
+        if (dropdownMenu) {
+            console.log('✅ Dropdown menu found:', dropdownMenu);
+        } else {
+            console.error('❌ Dropdown menu not found');
+        }
+        
+        // Click to toggle dropdown
+        categoriesDropdown.addEventListener('click', function(e) {
             e.preventDefault();
-            const dropdown = this.querySelector('.nav-categories-dropdown-menu');
-            if (dropdown) {
-                dropdown.classList.toggle('show');
+            e.stopPropagation();
+            console.log('🖱️ Categories dropdown clicked');
+            if (dropdownMenu) {
+                dropdownMenu.classList.toggle('show');
+                const isExpanded = dropdownMenu.classList.contains('show');
+                this.setAttribute('aria-expanded', isExpanded.toString());
+                console.log('📋 Dropdown toggled:', isExpanded ? 'open' : 'closed');
+            }
+        });
+        
+        // Keyboard navigation
+        categoriesDropdown.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                console.log('⌨️ Keyboard navigation triggered');
+                this.click();
             }
         });
         
         // Close dropdown when clicking outside
         document.addEventListener('click', function(e) {
-            if (!navCategoriesMenu.contains(e.target)) {
-                const dropdown = navCategoriesMenu.querySelector('.nav-categories-dropdown-menu');
-                if (dropdown) {
-                    dropdown.classList.remove('show');
+            if (!categoriesDropdown.contains(e.target)) {
+                if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+                    dropdownMenu.classList.remove('show');
+                    categoriesDropdown.setAttribute('aria-expanded', 'false');
+                    console.log('📋 Dropdown closed (click outside)');
                 }
             }
         });
+        
+        // Close dropdown on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+                    dropdownMenu.classList.remove('show');
+                    categoriesDropdown.setAttribute('aria-expanded', 'false');
+                    console.log('📋 Dropdown closed (escape key)');
+                }
+            }
+        });
+    } else {
+        console.warn('⚠️ Categories dropdown not found');
     }
 });
 
