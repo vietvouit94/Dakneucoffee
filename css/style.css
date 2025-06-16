@@ -182,6 +182,7 @@ html {
     border-radius: var(--border-radius) 0 0 var(--border-radius);
     transition: var(--transition);
     min-width: 120px;
+    z-index: 2010;
 }
 
 .categories-dropdown:hover {
@@ -193,7 +194,7 @@ html {
     background: #fff !important;
     color: #222 !important;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    z-index: 1001;
+    z-index: 2020 !important;
     position: absolute;
     top: 100%;
     left: 0;
@@ -324,6 +325,8 @@ html {
     background: white;
     border-bottom: 1px solid var(--border-color);
     padding: 0 20px;
+    z-index: 100;
+    position: relative;
 }
 
 .nav-content {
