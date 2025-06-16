@@ -927,6 +927,10 @@ html {
     .abt {
         max-width: none;
     }
+    
+    .categories-dropdown {
+        display: none !important;
+    }
 }
 
 @media (min-width: 769px) {
