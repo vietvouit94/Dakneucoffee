@@ -1010,3 +1010,8 @@ html {
 .categories-dropdown:hover > .dropdown-menu, .categories-dropdown:focus-within > .dropdown-menu {
   display: block;
 }
+@media (max-width: 768px) {
+    .nav-toggle {
+      display: block !important;
+    }
+  }
