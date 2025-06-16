@@ -208,7 +208,7 @@ html {
 .categories-dropdown:hover .dropdown-menu,
 .categories-dropdown:focus-within .dropdown-menu,
 .categories-dropdown .dropdown-menu.show {
-    display: block;
+    display: block !important;
 }
 
 .categories-dropdown .dropdown-menu li {
