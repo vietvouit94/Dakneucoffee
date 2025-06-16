@@ -971,3 +971,25 @@ html {
 .dropdown-menu li:last-child {
   border-bottom: none;
 }
+
+.categories-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0 12px;
+  min-height: 44px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--primary-color);
+  user-select: none;
+}
+.categories-dropdown:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+.categories-dropdown > span {
+  margin-right: 8px;
+}
