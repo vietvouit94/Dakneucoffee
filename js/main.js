@@ -88,15 +88,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Click to toggle dropdown (sửa lại logic)
         categoriesDropdown.addEventListener('click', function(e) {
             e.stopPropagation();
-            const isExpanded = this.getAttribute("aria-expanded") === "true";
-            this.setAttribute("aria-expanded", !isExpanded);
-            // Không cần set style cho .dropdown-menu nữa!
+            const dropdownMenu = this.querySelector('.dropdown-menu');
+            if (dropdownMenu) {
+                const isOpen = dropdownMenu.style.display === 'block';
+                dropdownMenu.style.display = isOpen ? 'none' : 'block';
+            }
         });
 
-        // Đóng dropdown khi click ngoài
+        // Đóng dropdown khi click ra ngoài
         document.addEventListener('click', function(event) {
             if (!categoriesDropdown.contains(event.target)) {
-                categoriesDropdown.setAttribute("aria-expanded", "false");
+                const dropdownMenu = categoriesDropdown.querySelector('.dropdown-menu');
+                if (dropdownMenu) dropdownMenu.style.display = 'none';
             }
         });
 
