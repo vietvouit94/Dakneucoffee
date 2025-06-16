@@ -872,9 +872,18 @@ html {
     }
     
     .main-nav {
+        display: none;
         flex-direction: column;
         width: 100%;
-        gap: 0;
+        background: #2d2d2d;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 2000;
+    }
+    
+    .main-nav.show {
+        display: flex;
     }
     
     .main-nav a {
