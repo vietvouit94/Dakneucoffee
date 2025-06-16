@@ -87,15 +87,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Click to toggle dropdown
         categoriesDropdown.addEventListener('click', function(e) {
-            e.preventDefault();
             e.stopPropagation();
-            console.log('🖱️ Categories dropdown clicked');
-            if (dropdownMenu) {
-                dropdownMenu.classList.toggle('show');
-                const isExpanded = dropdownMenu.classList.contains('show');
-                this.setAttribute('aria-expanded', isExpanded.toString());
-                console.log('📋 Dropdown toggled:', isExpanded ? 'open' : 'closed');
-            }
+            const isExpanded = dropdown.getAttribute("aria-expanded") === "true";
+            dropdown.setAttribute("aria-expanded", !isExpanded);
+            dropdownMenu.style.display = !isExpanded ? "block" : "none";
         });
         
         // Keyboard navigation
@@ -108,13 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!categoriesDropdown.contains(e.target)) {
-                if (dropdownMenu && dropdownMenu.classList.contains('show')) {
-                    dropdownMenu.classList.remove('show');
-                    categoriesDropdown.setAttribute('aria-expanded', 'false');
-                    console.log('📋 Dropdown closed (click outside)');
-                }
+        document.addEventListener('click', function(event) {
+            if (!categoriesDropdown.contains(event.target)) {
+                dropdown.setAttribute("aria-expanded", "false");
+                dropdownMenu.style.display = "none";
             }
         });
         
