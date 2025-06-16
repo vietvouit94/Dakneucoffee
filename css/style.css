@@ -260,7 +260,7 @@ html {
 
 /* Navigation */
 .navigation {
-    background: white;
+    background: #2d2d2d;
     border-bottom: 1px solid var(--border-color);
     padding: 0 20px;
     z-index: 100;
