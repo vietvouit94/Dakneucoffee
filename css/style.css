@@ -1095,3 +1095,6 @@ html {
         display: flex !important;
     }
 }
+.categories-dropdown[aria-expanded="true"] > .dropdown-menu {
+    display: block !important;
+  }
