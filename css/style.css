@@ -993,3 +993,7 @@ html {
 .categories-dropdown > span {
   margin-right: 8px;
 }
+
+.categories-dropdown:hover > .dropdown-menu, .categories-dropdown:focus-within > .dropdown-menu {
+  display: block;
+}
