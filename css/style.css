@@ -895,7 +895,9 @@ html {
     .main-nav a::after {
         display: none;
     }
-    
+    .top-bar-right{
+        display: none !important;
+    }
     .coffee h2 {
         font-size: 2.5rem;
     }
