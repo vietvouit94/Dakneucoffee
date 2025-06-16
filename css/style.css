@@ -164,7 +164,7 @@ html {
     align-items: stretch;
     width: 100%;
     border-radius: var(--border-radius);
-    overflow: hidden;
+    overflow: visible;
     box-shadow: var(--shadow);
 }
 
