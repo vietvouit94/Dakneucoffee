@@ -36,11 +36,17 @@
     <link rel="preload" href="css/style.css" as="style">
     <link rel="preload" href="css/responsive.css" as="style">
     <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="img/header-bg.jpg" as="image">
+    
+    <!-- Optimized Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Theme Color for Mobile Browsers -->
     <meta name="theme-color" content="#8B4513">
@@ -54,15 +60,13 @@
     <!-- Top Bar -->
 <div class="top-bar">
     <div class="top-bar-left">
-        <!-- Nếu không cần logo Envato, có thể bỏ dòng này -->
-        <!-- <img src="img/envato-logo.png" alt="Envato Market" class="envato-logo"> -->
         <div style="display: flex; align-items: center; gap: 20px;">
-            <a href="#" class="envato-logo">🌿DakNue Coffea</a>
+            <a href="#" class="envato-logo" aria-label="DakNue Coffea Home">🌿DakNue Coffea</a>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>
@@ -74,36 +78,36 @@
   <!-- Main Header -->
     <div class="main-header">
         <div class="header-content">
-            <a href="#" class="logo">
-                <img src="img/cafe.png" alt="DakNue Coffee Logo" style="width: 68px; height: 68px; margin-right: 12px;">
+            <a href="#" class="logo" aria-label="DakNue Coffea Logo">
+                <img src="img/cafe.png" alt="DakNue Coffee Logo" style="width: 68px; height: 68px; margin-right: 12px;" loading="eager">
                  DakNue Coffea
             </a>
             <div class="search-section">
                 <div class="search-group">
-                    <div class="categories-dropdown">
+                    <div class="categories-dropdown" role="button" tabindex="0" aria-label="Select coffee category">
                         <span>Danh mục</span>
-                        <ul class="dropdown-menu">
-                            <li>Cà phê Arabica</li>
-                            <li>Cà phê Robusta</li>
-                            <li>Cà phê Culi</li>
-                            <li>Cà phê Moka</li>
-                            <li>Cà phê Cherry</li>
-                            <li>Cà phê Catimor</li>
+                        <ul class="dropdown-menu" role="listbox">
+                            <li role="option">Cà phê Arabica</li>
+                            <li role="option">Cà phê Robusta</li>
+                            <li role="option">Cà phê Culi</li>
+                            <li role="option">Cà phê Moka</li>
+                            <li role="option">Cà phê Cherry</li>
+                            <li role="option">Cà phê Catimor</li>
                         </ul>
                     </div>
                     <div class="search-bar">
-                        <input type="text" placeholder="Tìm kiếm Arabica, Robusta rang xay">
-                        <button class="search-btn">
+                        <input type="text" placeholder="Tìm kiếm Arabica, Robusta rang xay" aria-label="Search coffee products">
+                        <button class="search-btn" aria-label="Search">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </div>
             </div>
             <div class="header-actions">
-                <a href="#" class="wishlist">
+                <a href="#" class="wishlist" aria-label="Wishlist">
                     <i class="far fa-heart"></i>
                 </a>
-                <a href="#" class="cart">
+                <a href="#" class="cart" aria-label="Shopping cart">
                     <i class="fas fa-shopping-cart"></i>
                     <div class="cart-info">
                         <div class="cart-count">9 Packet</div>
@@ -115,24 +119,24 @@
     </div>
 
 <!-- Navigation -->
-    <nav class="navigation">
+    <nav class="navigation" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
-            <div class="nav-categories-menu" tabindex="0">
+            <div class="nav-categories-menu" tabindex="0" role="button" aria-label="Browse coffee categories">
                 <i class="fas fa-bars"></i>
                 Categories
-                <ul class="nav-categories-dropdown-menu">
-                    <li>Cà phê Arabica</li>
-                    <li>Cà phê Robusta</li>
-                    <li>Cà phê Culi</li>
-                    <li>Cà phê Moka</li>
-                    <li>Cà phê Cherry</li>
-                    <li>Cà phê Catimor</li>
-                    <li class="nav-more-categories">
+                <ul class="nav-categories-dropdown-menu" role="menu">
+                    <li role="menuitem">Cà phê Arabica</li>
+                    <li role="menuitem">Cà phê Robusta</li>
+                    <li role="menuitem">Cà phê Culi</li>
+                    <li role="menuitem">Cà phê Moka</li>
+                    <li role="menuitem">Cà phê Cherry</li>
+                    <li role="menuitem">Cà phê Catimor</li>
+                    <li class="nav-more-categories" role="menuitem">
                         <i class="fas fa-plus"></i>More Coffee
-                        <ul class="nav-sub-dropdown">
-                            <li>Cà Phê Đăk Lăk</li>
-                            <li>Cà Phê Đà Lạt</li>
-                            <li>Cà Phê Đắk Nông</li>
+                        <ul class="nav-sub-dropdown" role="menu">
+                            <li role="menuitem">Cà Phê Đăk Lăk</li>
+                            <li role="menuitem">Cà Phê Đà Lạt</li>
+                            <li role="menuitem">Cà Phê Đắk Nông</li>
                         </ul>
                     </li>
                 </ul>
@@ -161,8 +165,8 @@
         <div class="main">
             <div class="service-img">
                 <div class="black">
-                    <a href="https://www.youtube.com/@endgamingwithharsh/videos?sub_confirmation=1">
-                        <img src="img/play-icon.png" alt="">
+                    <a href="https://www.youtube.com/@endgamingwithharsh/videos?sub_confirmation=1" aria-label="Watch coffee making process">
+                        <img src="img/play-icon.png" alt="Play video" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -173,7 +177,7 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid quia architecto, pariatur dicta
                     amet inventore suscipit dolorum eligendi. Harum fugit tempora, recusandae accusamus exercitationem
                     fugiat vel nemo sint consequuntur commodi neque ea hic ad.</p>
-                <img src="img/signature.png" alt="sig" class="sign">
+                <img src="img/signature.png" alt="Coffee signature" class="sign" loading="lazy">
             </div>
         </div>
     </section>
@@ -186,7 +190,7 @@
                     culpa accusantium aliquid sunt repellendus deleniti earum illo quam!</p>
                 <a href="#header"><button class="read_more">Read More</button></a>
             </div>
-            <div class="ar"><img src="img/about-img.png" alt="about" class="abu_us"></div>
+            <div class="ar"><img src="img/about-img.png" alt="About our coffee shop" class="abu_us" loading="lazy"></div>
         </div>
     </section>
     <section class="menu" id="menu">
@@ -290,7 +294,7 @@
             <div class="box">
                 <div class="b-img">
                     <h1>03 June</h1>
-                    <img src="img/blog-img1.png" alt="">
+                    <img src="img/blog-img1.png" alt="Coffee preparation techniques" loading="lazy">
                 </div>
                 <div class="blogs">
                     <h2>PREP TECHNIQUES Coffee</h2>
@@ -303,7 +307,7 @@
             <div class="box">
                 <div class="b-img">
                     <h1>02 July</h1>
-                    <img src="img/blog-img2.png" alt="">
+                    <img src="img/blog-img2.png" alt="Best coffee experience" loading="lazy">
                 </div>
                 <div class="blogs">
                     <h2>Enjoy BEST COFFEE</h2>
@@ -318,12 +322,12 @@
     <section class="contact_us" id="contact_coffee">
         <h1>Contact Me</h1>
         <div class="contactme">
-            <form action="" method="get" id="coffee_order">
-                <input type="text" placeholder="Name" id="name" name="name" required maxlength="50">
-                <input type="email" placeholder="Email" id="email" name="email" required maxlength="45">
-                <input type="text" placeholder="Phone Number" id="phno" name="phone" required maxlength="10">
-                <textarea name="desc" id="message" placeholder="Message" required maxlength="150"></textarea>
-                <button class="submit" type="submit" onclick="sub()" id="hi">Submit</button>
+            <form action="" method="get" id="coffee_order" novalidate>
+                <input type="text" placeholder="Name" id="name" name="name" required maxlength="50" aria-label="Your name">
+                <input type="email" placeholder="Email" id="email" name="email" required maxlength="45" aria-label="Your email">
+                <input type="tel" placeholder="Phone Number" id="phno" name="phone" required maxlength="10" aria-label="Your phone number">
+                <textarea name="desc" id="message" placeholder="Message" required maxlength="150" aria-label="Your message"></textarea>
+                <button class="submit" type="submit" id="hi">Submit</button>
             </form>
         </div>
     </section>
@@ -337,11 +341,11 @@
             </div>
             <div class="follows">
                 <p>Follow Me:</p>
-                <a href="https://github.com/201Harsh" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://discord.gg/z7hEQtFj" target="_blank"><i class="fab fa-discord"></i></a>
-                <a href="https://www.instagram.com/201harshs/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://in.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/@endgamingwithharsh/videos?sub_confirmation=1" target="_blank"><i
+                <a href="https://github.com/201Harsh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://discord.gg/z7hEQtFj" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/201harshs/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://in.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@endgamingwithharsh/videos?sub_confirmation=1" target="_blank" aria-label="YouTube"><i
                         class="fab fa-youtube"></i></a>
             </div>
         </div>
